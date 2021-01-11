@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H15" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Dish" representedClassName="Dish" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="last" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Meal" representedClassName="Meal" syncable="YES">
+        <attribute name="dishes" optional="YES" attributeType="String"/>
+        <attribute name="dt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="ld" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Dish" positionX="-36" positionY="36" width="128" height="103"/>
+        <element name="Meal" positionX="-54" positionY="-9" width="128" height="88"/>
+    </elements>
+</model>

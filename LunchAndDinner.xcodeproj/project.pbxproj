@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1073D9259D572D00D7A33A /* Meals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F1073D7259D572D00D7A33A /* Meals.xcdatamodeld */; };
+		7F1073E5259D58F200D7A33A /* DishRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1073E4259D58F200D7A33A /* DishRow.swift */; };
+		7F1073F025A0423600D7A33A /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1073EF25A0423600D7A33A /* MealView.swift */; };
+		7F1073FD25A2B51A00D7A33A /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1073FC25A2B51A00D7A33A /* MealListView.swift */; };
+		7F10740425A347F900D7A33A /* Dish+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10740025A347F900D7A33A /* Dish+CoreDataClass.swift */; };
+		7F10740525A347F900D7A33A /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10740125A347F900D7A33A /* Dish+CoreDataProperties.swift */; };
+		7F10740A25A49E8600D7A33A /* DishRowSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10740925A49E8500D7A33A /* DishRowSelect.swift */; };
+		7F10741325A5F46200D7A33A /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10741125A5F46200D7A33A /* Meal+CoreDataClass.swift */; };
+		7F10741425A5F46200D7A33A /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10741225A5F46200D7A33A /* Meal+CoreDataProperties.swift */; };
 		7F9F422E25879BC40014B79E /* LunchAndDinnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F422D25879BC40014B79E /* LunchAndDinnerApp.swift */; };
-		7F9F423025879BC40014B79E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F422F25879BC40014B79E /* ContentView.swift */; };
+		7F9F423025879BC40014B79E /* DishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F422F25879BC40014B79E /* DishListView.swift */; };
 		7F9F423225879BCA0014B79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9F423125879BCA0014B79E /* Assets.xcassets */; };
 		7F9F423525879BCA0014B79E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9F423425879BCA0014B79E /* Preview Assets.xcassets */; };
 		7F9F423725879BCA0014B79E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F423625879BCA0014B79E /* Persistence.swift */; };
-		7F9F423A25879BCA0014B79E /* LunchAndDinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F423825879BCA0014B79E /* LunchAndDinner.xcdatamodeld */; };
+		7F9F424B2587A06B0014B79E /* MyColor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9F424A2587A06B0014B79E /* MyColor.xcassets */; };
+		7F9F425C258A39050014B79E /* AddDishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F425B258A39050014B79E /* AddDishView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F1073D8259D572D00D7A33A /* Meals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Meals.xcdatamodel; sourceTree = "<group>"; };
+		7F1073E4259D58F200D7A33A /* DishRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishRow.swift; sourceTree = "<group>"; };
+		7F1073EF25A0423600D7A33A /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		7F1073FC25A2B51A00D7A33A /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
+		7F10740025A347F900D7A33A /* Dish+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7F10740125A347F900D7A33A /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7F10740925A49E8500D7A33A /* DishRowSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishRowSelect.swift; sourceTree = "<group>"; };
+		7F10741125A5F46200D7A33A /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7F10741225A5F46200D7A33A /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7F9F422A25879BC40014B79E /* LunchAndDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchAndDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9F422D25879BC40014B79E /* LunchAndDinnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchAndDinnerApp.swift; sourceTree = "<group>"; };
-		7F9F422F25879BC40014B79E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F9F422F25879BC40014B79E /* DishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListView.swift; sourceTree = "<group>"; };
 		7F9F423125879BCA0014B79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F9F423425879BCA0014B79E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F9F423625879BCA0014B79E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		7F9F423925879BCA0014B79E /* LunchAndDinner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LunchAndDinner.xcdatamodel; sourceTree = "<group>"; };
 		7F9F423B25879BCA0014B79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F9F424A2587A06B0014B79E /* MyColor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MyColor.xcassets; sourceTree = "<group>"; };
+		7F9F425B258A39050014B79E /* AddDishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +60,10 @@
 		7F9F422125879BC30014B79E = {
 			isa = PBXGroup;
 			children = (
+				7F10741125A5F46200D7A33A /* Meal+CoreDataClass.swift */,
+				7F10741225A5F46200D7A33A /* Meal+CoreDataProperties.swift */,
+				7F10740025A347F900D7A33A /* Dish+CoreDataClass.swift */,
+				7F10740125A347F900D7A33A /* Dish+CoreDataProperties.swift */,
 				7F9F422C25879BC40014B79E /* LunchAndDinner */,
 				7F9F422B25879BC40014B79E /* Products */,
 			);
@@ -57,11 +81,17 @@
 			isa = PBXGroup;
 			children = (
 				7F9F422D25879BC40014B79E /* LunchAndDinnerApp.swift */,
-				7F9F422F25879BC40014B79E /* ContentView.swift */,
+				7F9F422F25879BC40014B79E /* DishListView.swift */,
+				7F1073E4259D58F200D7A33A /* DishRow.swift */,
+				7F10740925A49E8500D7A33A /* DishRowSelect.swift */,
+				7F9F425B258A39050014B79E /* AddDishView.swift */,
+				7F1073EF25A0423600D7A33A /* MealView.swift */,
+				7F1073FC25A2B51A00D7A33A /* MealListView.swift */,
+				7F9F424A2587A06B0014B79E /* MyColor.xcassets */,
 				7F9F423125879BCA0014B79E /* Assets.xcassets */,
 				7F9F423625879BCA0014B79E /* Persistence.swift */,
 				7F9F423B25879BCA0014B79E /* Info.plist */,
-				7F9F423825879BCA0014B79E /* LunchAndDinner.xcdatamodeld */,
+				7F1073D7259D572D00D7A33A /* Meals.xcdatamodeld */,
 				7F9F423325879BCA0014B79E /* Preview Content */,
 			);
 			path = LunchAndDinner;
@@ -134,6 +164,7 @@
 			files = (
 				7F9F423525879BCA0014B79E /* Preview Assets.xcassets in Resources */,
 				7F9F423225879BCA0014B79E /* Assets.xcassets in Resources */,
+				7F9F424B2587A06B0014B79E /* MyColor.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +175,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9F423A25879BCA0014B79E /* LunchAndDinner.xcdatamodeld in Sources */,
 				7F9F423725879BCA0014B79E /* Persistence.swift in Sources */,
-				7F9F423025879BC40014B79E /* ContentView.swift in Sources */,
+				7F9F425C258A39050014B79E /* AddDishView.swift in Sources */,
+				7F1073E5259D58F200D7A33A /* DishRow.swift in Sources */,
+				7F10740A25A49E8600D7A33A /* DishRowSelect.swift in Sources */,
+				7F9F423025879BC40014B79E /* DishListView.swift in Sources */,
 				7F9F422E25879BC40014B79E /* LunchAndDinnerApp.swift in Sources */,
+				7F10741425A5F46200D7A33A /* Meal+CoreDataProperties.swift in Sources */,
+				7F10741325A5F46200D7A33A /* Meal+CoreDataClass.swift in Sources */,
+				7F1073F025A0423600D7A33A /* MealView.swift in Sources */,
+				7F1073D9259D572D00D7A33A /* Meals.xcdatamodeld in Sources */,
+				7F10740525A347F900D7A33A /* Dish+CoreDataProperties.swift in Sources */,
+				7F10740425A347F900D7A33A /* Dish+CoreDataClass.swift in Sources */,
+				7F1073FD25A2B51A00D7A33A /* MealListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LunchAndDinner/Preview Content\"";
-				DEVELOPMENT_TEAM = 5MFK8YDU63;
+				DEVELOPMENT_TEAM = 8LQD4W8MAQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LunchAndDinner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -285,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = NM.LunchAndDinner;
+				PRODUCT_BUNDLE_IDENTIFIER = myhandmade.LunchAndDinner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,7 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LunchAndDinner/Preview Content\"";
-				DEVELOPMENT_TEAM = 5MFK8YDU63;
+				DEVELOPMENT_TEAM = 8LQD4W8MAQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LunchAndDinner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -307,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = NM.LunchAndDinner;
+				PRODUCT_BUNDLE_IDENTIFIER = myhandmade.LunchAndDinner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,13 +378,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7F9F423825879BCA0014B79E /* LunchAndDinner.xcdatamodeld */ = {
+		7F1073D7259D572D00D7A33A /* Meals.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7F9F423925879BCA0014B79E /* LunchAndDinner.xcdatamodel */,
+				7F1073D8259D572D00D7A33A /* Meals.xcdatamodel */,
 			);
-			currentVersion = 7F9F423925879BCA0014B79E /* LunchAndDinner.xcdatamodel */;
-			path = LunchAndDinner.xcdatamodeld;
+			currentVersion = 7F1073D8259D572D00D7A33A /* Meals.xcdatamodel */;
+			path = Meals.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

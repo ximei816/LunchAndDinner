@@ -14,7 +14,7 @@ struct MealListView: View {
     @State private var mealWidth: CGFloat = UIScreen.main.bounds.size.width / 2.7
     @State private var mealHeight: CGFloat = UIScreen.main.bounds.size.height / 10.5
     @State private var toDishList = false
-    @State private var startDt = Date()
+    @State var startDt = Date()
     
     var body: some View {
         Color.shell
@@ -44,17 +44,15 @@ struct MealListView: View {
                                     
                                     //day of week - E
                                     Text(getDayOfWeekString(dt: Calendar.current.date(byAdding: .day, value: row, to: startDt)!))
-                                }
+                                }.frame(width: 50)
                                 
                                 //lunch
-                                MealView(mealdt: Calendar.current.date(byAdding: .day, value: row, to: startDt)!,
-                                         mealLd: "l")
+                                MealView(startDt: $startDt, rowNo: row, mealLd: "l")
                                     .frame(width: mealWidth, height: mealHeight)
                                     
                                 
                                 //dinner
-                                MealView(mealdt: Calendar.current.date(byAdding: .day, value: row, to: startDt)!,
-                                         mealLd: "d")
+                                MealView(startDt: $startDt, rowNo: row, mealLd: "d")
                                     .frame(width: mealWidth, height: mealHeight)
                             }
                         }
@@ -105,3 +103,4 @@ struct MealListView: View {
         return weekDayString
     }
 }
+

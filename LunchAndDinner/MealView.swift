@@ -26,6 +26,9 @@ struct MealDishRow: View {
                 .font(.system(size: 10))
             Text(name).font(.caption).lineLimit(nil)
         }
+        .onAppear(perform: {
+            print("MealDishRow - \(name)")
+        })
     }
     
     func getDishType(dishName: String) -> String {
@@ -52,8 +55,9 @@ struct MealView: View {
     @State private var toDishList = false
     @State private var dishNames: [String] = []
 
-    @State var mealdt: Date
-    @State var mealLd: String
+    @Binding var startDt: Date
+    var rowNo: Int
+    var mealLd: String
     
     var body: some View {
 
@@ -71,25 +75,30 @@ struct MealView: View {
             }.buttonStyle(PlainButtonStyle())
         }
         .fullScreenCover(isPresented: self.$toDishList){
-            DishListView(isEdit: true, selections: dishNames, fromMealList: false, fromMealDt: mealdt, fromMealLd: mealLd).environment(\.managedObjectContext, viewContext)
+            DishListView(isEdit: true, selections: dishNames, fromMealList: false, fromMealDt: Calendar.current.date(byAdding: .day, value: rowNo, to: startDt)!, fromMealLd: mealLd).environment(\.managedObjectContext, viewContext)
         }
         .onAppear(perform: {
+            print("MealView - \(startDt) \(rowNo) & \(mealLd)")
             setDishNames()
         })
         .onReceive(self.didSave) { _ in
             setDishNames()
         }
+        .onChange(of: startDt, perform: { _ in
+            setDishNames()
+        })
         
     }
     
     func setDishNames() {
-        let meal = getMeal(ld: mealLd, dt: mealdt)
+        let meal = getMeal(ld: mealLd, dt: Calendar.current.date(byAdding: .day, value: rowNo, to: startDt)!)
         if meal?.dishes?.count ?? 0 > 0 {
             let dishes = meal?.dishes
             dishNames = dishes?.components(separatedBy: ",") ?? []
         }else{
             dishNames = []
         }
+        print("setDishNames - \(mealLd) \(startDt) \(rowNo) \(dishNames)")
     }
     
     func getMeal(ld:String,dt:Date) -> Meal? {

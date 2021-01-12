@@ -102,6 +102,7 @@ struct DishListView: View {
                             }.disabled(selections.count <= 0)
                         }
                     }.sheet(isPresented: self.$toAdd){AddDishView().environment(\.managedObjectContext, viewContext)}
+                    .onAppear(perform: {print("DishListView - \(fromMealDt)")})
             )
     }
     
@@ -113,14 +114,17 @@ struct DishListView: View {
                 dishesStr += ",\(dish)"
                 
                 if items.filter({$0.name == dish}).count > 0 {
-                    items.filter{$0.name == dish}[0].last = Date()
+                    print(fromMealDt)
+                    items.filter{$0.name == dish}[0].last = fromMealDt
                 }
             }
             
             if meals.filter({$0.ld == fromMealLd && getLongDateString(dt: $0.dt!) == getLongDateString(dt: fromMealDt)}).count > 0
             {
+                print("meal already exist - update")
                 meals.filter({$0.ld == fromMealLd && getLongDateString(dt: $0.dt!) == getLongDateString(dt: fromMealDt)})[0].dishes = String(dishesStr.dropFirst(1))
             }else{
+                print("create new meal")
                 let newItem = Meal(context: viewContext)
                 newItem.dt = fromMealDt
                 newItem.ld = String(fromMealLd)
@@ -129,6 +133,7 @@ struct DishListView: View {
             
             do {
                 try viewContext.save()
+                print("saved")
             } catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")

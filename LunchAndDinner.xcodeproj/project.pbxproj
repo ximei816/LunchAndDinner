@@ -16,6 +16,7 @@
 		7F10740A25A49E8600D7A33A /* DishRowSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10740925A49E8500D7A33A /* DishRowSelect.swift */; };
 		7F10741325A5F46200D7A33A /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10741125A5F46200D7A33A /* Meal+CoreDataClass.swift */; };
 		7F10741425A5F46200D7A33A /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10741225A5F46200D7A33A /* Meal+CoreDataProperties.swift */; };
+		7F44370C25ADD3680002ED32 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44370B25ADD3680002ED32 /* MealViewModel.swift */; };
 		7F9F422E25879BC40014B79E /* LunchAndDinnerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F422D25879BC40014B79E /* LunchAndDinnerApp.swift */; };
 		7F9F423025879BC40014B79E /* DishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F422F25879BC40014B79E /* DishListView.swift */; };
 		7F9F423225879BCA0014B79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9F423125879BCA0014B79E /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		7F10740925A49E8500D7A33A /* DishRowSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishRowSelect.swift; sourceTree = "<group>"; };
 		7F10741125A5F46200D7A33A /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7F10741225A5F46200D7A33A /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7F44370B25ADD3680002ED32 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		7F9F422A25879BC40014B79E /* LunchAndDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LunchAndDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9F422D25879BC40014B79E /* LunchAndDinnerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchAndDinnerApp.swift; sourceTree = "<group>"; };
 		7F9F422F25879BC40014B79E /* DishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				7F10740925A49E8500D7A33A /* DishRowSelect.swift */,
 				7F9F425B258A39050014B79E /* AddDishView.swift */,
 				7F1073EF25A0423600D7A33A /* MealView.swift */,
+				7F44370B25ADD3680002ED32 /* MealViewModel.swift */,
 				7F1073FC25A2B51A00D7A33A /* MealListView.swift */,
 				7F9F424A2587A06B0014B79E /* MyColor.xcassets */,
 				7F9F423125879BCA0014B79E /* Assets.xcassets */,
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F9F423725879BCA0014B79E /* Persistence.swift in Sources */,
+				7F44370C25ADD3680002ED32 /* MealViewModel.swift in Sources */,
 				7F9F425C258A39050014B79E /* AddDishView.swift in Sources */,
 				7F1073E5259D58F200D7A33A /* DishRow.swift in Sources */,
 				7F10740A25A49E8600D7A33A /* DishRowSelect.swift in Sources */,

@@ -76,7 +76,6 @@ struct AddDishView: View {
                 
                 name = ""
                 type_cd = 0
-                print("create new dish")
             }
         }
     }

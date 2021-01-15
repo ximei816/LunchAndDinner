@@ -12,6 +12,7 @@ struct DishRow: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
+    @State private var showingAlert = false
     @State var item: Dish
 
     var body: some View {
@@ -34,10 +35,12 @@ struct DishRow: View {
             Spacer()
             
             Button(action: {
-                deleteItems(item: item)
+                showingAlert = true
             }, label: {
                 Image(systemName: "trash").foregroundColor(.gray)
-            })
+            }).alert(isPresented: $showingAlert) {
+                Alert(title: Text("Delete Dish"), message: Text("Are you sure you want to delete \(item.name!)?"), primaryButton: .cancel(), secondaryButton: .destructive(Text("Delete"), action: {deleteItems(item: item)}))
+            }
         }
     }
     
@@ -58,5 +61,6 @@ struct DishRow: View {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+        showingAlert = false
     }
 }

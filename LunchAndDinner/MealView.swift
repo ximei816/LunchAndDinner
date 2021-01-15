@@ -26,9 +26,6 @@ struct MealDishRow: View {
                 .font(.system(size: 10))
             Text(name).font(.caption).lineLimit(nil)
         }
-        .onAppear(perform: {
-            print("MealDishRow - \(name)")
-        })
     }
     
     func getDishType(dishName: String) -> String {
@@ -78,7 +75,6 @@ struct MealView: View {
             DishListView(isEdit: true, selections: dishNames, fromMealList: false, fromMealDt: Calendar.current.date(byAdding: .day, value: rowNo, to: startDt)!, fromMealLd: mealLd).environment(\.managedObjectContext, viewContext)
         }
         .onAppear(perform: {
-            print("MealView - \(startDt) \(rowNo) & \(mealLd)")
             setDishNames()
         })
         .onReceive(self.didSave) { _ in
@@ -98,7 +94,6 @@ struct MealView: View {
         }else{
             dishNames = []
         }
-        print("setDishNames - \(mealLd) \(startDt) \(rowNo) \(dishNames)")
     }
     
     func getMeal(ld:String,dt:Date) -> Meal? {

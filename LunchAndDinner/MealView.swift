@@ -51,6 +51,7 @@ struct MealView: View {
 
     @State private var toDishList = false
     @State private var dishNames: [String] = []
+    @State private var showingAlert = false
 
     @Binding var startDt: Date
     var rowNo: Int
@@ -65,11 +66,24 @@ struct MealView: View {
                 }.listRowBackground(Color.clear)
             }.environment(\.defaultMinListRowHeight, 15)
             
-            Button(action: {toDishList.toggle()}) {
-                Label("", systemImage: "pencil.circle")
-                    .foregroundColor(.eggplant)
-                    .frame(width: 15.0, height: 15.0)
-            }.buttonStyle(PlainButtonStyle())
+            VStack(spacing:20){
+                Button(action: {toDishList.toggle()}) {
+                    Label("", systemImage: "pencil.circle")
+                        .foregroundColor(.eggplant)
+                        .frame(width: 15.0, height: 15.0)
+                }.buttonStyle(PlainButtonStyle())
+                
+                if dishNames.count > 0 {
+                    Button(action: {showingAlert = true}) {
+                        Label("", systemImage: "trash")
+                            .foregroundColor(.gray)
+                            .frame(width: 15.0, height: 15.0)
+                    }.buttonStyle(PlainButtonStyle())
+                    .alert(isPresented: $showingAlert) {
+                        Alert(title: Text("Delete Meal"), message: Text("Are you sure to delete all dishes for this meal?"), primaryButton: .cancel(), secondaryButton: .destructive(Text("Delete"), action: {deleteMeal(ld: mealLd, dt: Calendar.current.date(byAdding: .day, value: rowNo, to: startDt)!)}))
+                    }
+                }
+            }
         }
         .fullScreenCover(isPresented: self.$toDishList){
             DishListView(isEdit: true, selections: dishNames, fromMealList: false, fromMealDt: Calendar.current.date(byAdding: .day, value: rowNo, to: startDt)!, fromMealLd: mealLd).environment(\.managedObjectContext, viewContext)
@@ -106,6 +120,21 @@ struct MealView: View {
         }else{
             return nil
         }
+    }
+    
+    private func deleteMeal(ld:String,dt:Date) {
+        let item = meals.filter{
+            $0.ld == ld && getLongDateString(dt: $0.dt!) == getLongDateString(dt: dt)
+        }
+        
+        viewContext.delete(item[0])
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+        showingAlert = false
     }
     
     func getLongDateString(dt:Date) -> String {

@@ -49,11 +49,13 @@ struct MealListView: View {
                                 //lunch
                                 MealView(startDt: $startDt, rowNo: row, mealLd: "l")
                                     .frame(width: mealWidth, height: mealHeight)
+                                    .environment(\.managedObjectContext, viewContext)
                                     
                                 
                                 //dinner
                                 MealView(startDt: $startDt, rowNo: row, mealLd: "d")
                                     .frame(width: mealWidth, height: mealHeight)
+                                    .environment(\.managedObjectContext, viewContext)
                             }
                         }
                     }
@@ -64,6 +66,7 @@ struct MealListView: View {
                     
                 }.fullScreenCover(isPresented: self.$toDishList){
                     DishListView(isEdit: false, selections: [], fromMealList: true, fromMealDt: Date(), fromMealLd: "d")
+                        .environment(\.managedObjectContext, viewContext)
                 }
                 .onAppear(perform:{
                     //Set startDt - Sunday of current week

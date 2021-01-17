@@ -92,7 +92,7 @@ struct DishListView: View {
                             }) {
                                 Label("Save Dishes to Meal", systemImage: "square.and.arrow.down")
                                     .alert(isPresented: $showingAlert) {
-                                        Alert(title: Text("Show Alert"), message: Text("\(selections.count) items updated"), dismissButton: .default(Text("OK")){
+                                        Alert(title: Text("Show Alert"), message: Text("Items updated to \(getLongDateString(dt: fromMealDt)) - \(fromMealLd == "l" ? "lunch" : "dinner")"), dismissButton: .default(Text("OK")){
                                             
                                             //TODO - Save Meal
                                             self.presentationMode.wrappedValue.dismiss()
@@ -110,7 +110,10 @@ struct DishListView: View {
             var dishesStr = ""
             
             for dish in selections {
-                dishesStr += ",\(dish)"
+                
+                if items.filter({$0.name == dish}).count > 0 {
+                    dishesStr += ",\(dish)"
+                }
                 
                 if items.filter({$0.name == dish}).count > 0 {
                     items.filter{$0.name == dish}[0].last = fromMealDt
